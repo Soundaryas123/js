@@ -1,0 +1,15 @@
+.bag-button,
+.sale-button {
+    background-color: lightgreen;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.wishlist-button {
+    border: 2px solid black;
+    padding: 5px 35px;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+}

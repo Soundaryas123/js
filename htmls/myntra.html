@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 4</title>
+    <link rel="stylesheet" href="../css/myntra.css">
+</head>
+
+<body>
+    <main>
+        <button class="bag-button" onclick="bag_items++; 
+        document.querySelector('h1').innerText = `Your Bag has ${bag_items} items`">Add to Bag</button>
+        <button class="wishlist-button" onclick="bag_items--; document.querySelector('h1').innerText = `Your Bag has ${bag_items} items`">Move to Wishlist</button>
+        <button class="sale-button" onclick="bag_items+=2;document.querySelector('h1').innerText = `Your Bag has ${bag_items} items`">Add 1+1 sale item</button>
+        <h1></h1>
+    </main>
+    <script src="../scripts/myntra.js"></script>
+</body>
+
+</html>

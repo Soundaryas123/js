@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice-set-6 funtions</title>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        function oddEven(num) {
+            if (num % 2 == 0) {
+                return `${num} is even`
+            } else {
+                return `${num} is odd`
+            }
+        }
+
+        function largerOfTwo(a, b) {
+            // if (a > b) {
+            //     return `${a} is larger then ${b}`
+            // } else {
+
+            //     return `${b} is larger then ${a}`
+            // }
+return a>b? `${a} is larger then ${b}`:`${b} is larger then ${a}`
+        }
+
+        function celsiusToFahrenheit(celsius) {
+            Fahrenheit = (9 / 5) * celsius + 32
+            return Fahrenheit
+        }
+
+        console.log(oddEven(10))
+        console.log(largerOfTwo(13,9))
+        console.log(largerOfTwo(9,9))
+        console.log(celsiusToFahrenheit(100))
+        console.log(celsiusToFahrenheit(0))
+    </script>
+</body>
+
+</html>

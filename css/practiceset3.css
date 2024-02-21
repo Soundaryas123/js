@@ -1,0 +1,22 @@
+.clsbtn {
+    color: blue;
+}
+
+#idbtn {
+    color: red;
+}
+
+#add-to-bag {
+    background-color: #81d882;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.wishlist {
+    padding: 5px 35px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid black;
+}
