@@ -2,6 +2,9 @@ let score = {
     win: 0,
     lost: 0,
     tie: 0,
+    displayScore: function () {
+        return `Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} `
+    }
 }
 function generateComputerChoice() {
     let randomNum = Math.random() * 3;
@@ -61,5 +64,5 @@ function cricketResult(userChoice, computerChoice) {
 function showResult(userChoice, computerChoice, resultMsg) {
     alert(`You have choosen ${userChoice}. Computer Choice is ${computerChoice}. 
      ${resultMsg}
-     Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} ,`)
+     ${score.displayScore()}`)
 }
