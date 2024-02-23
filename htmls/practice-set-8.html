@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice-set-8 Date and DOM</title>
+
+</head>
+
+<body>
+
+
+    <button onclick="countClick()" class="count%2==0?background-color:'green':background-color:'red'">Show</button>
+    <div id="display-count"></div>
+    <script>
+
+        function countClick() {
+            let count;
+            onclick() = count++;
+            localStorage.setItem('Count',count)
+            document.querySelector('#display-count').innerText =   localStorage.getItem('Count');
+
+        }
+
+
+
+
+
+
+
+        function wishMessage(name = ':)') {
+            let currentTime = new Date().getHours();
+            if (currentTime >= 0 && currentTime < 12) {
+
+                return `Good Morning ${name}!`
+            } else if (currentTime >= 12 && currentTime < 16) {
+                return `Good Afternoon ${name}!`
+            } else if (currentTime >= 16 && currentTime < 19) {
+                return `Good Evening ${name}!`
+            } else {
+                return `Good Night ${name}!`
+            }
+        }
+        let message = wishMessage('arya')
+        console.log(message)
+    </script>
+</body>
+
+</html>

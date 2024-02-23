@@ -10,26 +10,33 @@
 
 <body>
   <h1>Bat Ball Stump Game</h1>
-  <button onclick="
+  
+  <button class="choice-button" onclick="
   let computerChoice= generateComputerChoice()
     let resultMsg = cricketResult('Bat',computerChoice);
     showResult('Bat',computerChoice,resultMsg)
   
-    ">Bat</button>
+    "><img src="images/bat.png" alt="Bat Image" class="choice-image"></button>
 
-  <button onclick="
+  <button class="choice-button" onclick="
    computerChoice=  generateComputerChoice()
    resultMsg = cricketResult('Ball',computerChoice);
    
    showResult('Ball',computerChoice,resultMsg)
-    ">Ball</button>
+    "><img src="images/ball.png" alt="Ball  Image" class="choice-image"></button>
 
-  <button onclick="
+  <button class="choice-button" onclick="
    computerChoice= generateComputerChoice()
     
    resultMsg = cricketResult('Stump',computerChoice);
    showResult('Stump',computerChoice,resultMsg)
-    ">Stump</button>
+    "><img src="images/stump.png" alt="Stump Image" class="choice-image"></button>
+
+
+    <h3 id="user-choice"></h3>
+    <h3 id="computer-choice"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
 
   <button onclick="localStorage.clear();
     resetScore();">Reset</button>

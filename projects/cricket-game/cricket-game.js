@@ -7,10 +7,11 @@ function resetScore(scoreStr) {
         win: 0,
         lost: 0,
         tie: 0,
-        displayScore: function () {
-            return `Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} `
-        }
     }
+    score.displayScore = function () {
+        return `Score : Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} `
+    }
+    showResult();
 }
 function generateComputerChoice() {
     let randomNum = Math.random() * 3;
@@ -67,8 +68,12 @@ function cricketResult(userChoice, computerChoice) {
 }
 
 function showResult(userChoice, computerChoice, resultMsg) {
-    localStorage.setItem('Score', JSON.stringify(score))
-    alert(`You have choosen ${userChoice}. Computer Choice is ${computerChoice}. 
-     ${resultMsg}
-     ${score.displayScore()}`)
+    localStorage.setItem('Score', JSON.stringify(score));
+
+    document.querySelector('#user-choice').innerText = userChoice ? `You have choosen ${userChoice}` : '';
+    document.querySelector('#computer-choice').innerText = computerChoice ? `Computer Choice is ${computerChoice}` : '';
+    document.querySelector('#result').innerText = resultMsg || '';
+    document.querySelector('#score').innerText = score.displayScore()
+
+
 }
