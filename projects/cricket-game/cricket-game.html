@@ -2,35 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Game</title>
-    <link rel="stylesheet" href="cricket-game.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="cricket-game.css">
 </head>
 
 <body>
-    <h1>Bat Ball Stump Game</h1>
-    <button onclick="
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
   let computerChoice= generateComputerChoice()
     let resultMsg = cricketResult('Bat',computerChoice);
     showResult('Bat',computerChoice,resultMsg)
   
     ">Bat</button>
 
-    <button onclick="
+  <button onclick="
    computerChoice=  generateComputerChoice()
    resultMsg = cricketResult('Ball',computerChoice);
    
    showResult('Ball',computerChoice,resultMsg)
     ">Ball</button>
 
-    <button onclick="
+  <button onclick="
    computerChoice= generateComputerChoice()
     
    resultMsg = cricketResult('Stump',computerChoice);
    showResult('Stump',computerChoice,resultMsg)
     ">Stump</button>
-    <script src="cricket-game.js"></script>
+
+  <button onclick="localStorage.clear();
+    resetScore();">Reset</button>
+  <script src="cricket-game.js"></script>
 </body>
 
 </html>

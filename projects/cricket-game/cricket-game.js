@@ -1,9 +1,15 @@
-let score = {
-    win: 0,
-    lost: 0,
-    tie: 0,
-    displayScore: function () {
-        return `Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} `
+let scoreStr = localStorage.getItem('Score')
+let score;
+resetScore(scoreStr);
+function resetScore(scoreStr) {
+
+    score = scoreStr ? JSON.parse(scoreStr) : {
+        win: 0,
+        lost: 0,
+        tie: 0,
+        displayScore: function () {
+            return `Won: ${score.win} , Lost: ${score.lost} ,Tie: ${score.tie} `
+        }
     }
 }
 function generateComputerChoice() {
@@ -19,7 +25,6 @@ function generateComputerChoice() {
 
 function cricketResult(userChoice, computerChoice) {
 
-    // let computerChoice = generateComputerChoice()
     if (userChoice === 'Bat') {
         if (computerChoice === 'Ball') {
             score.win++
@@ -62,6 +67,7 @@ function cricketResult(userChoice, computerChoice) {
 }
 
 function showResult(userChoice, computerChoice, resultMsg) {
+    localStorage.setItem('Score', JSON.stringify(score))
     alert(`You have choosen ${userChoice}. Computer Choice is ${computerChoice}. 
      ${resultMsg}
      ${score.displayScore()}`)
