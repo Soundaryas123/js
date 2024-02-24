@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice-set-10 Advance functions</title>
+    <style>
+        .double-btn {
+            height: 30px;
+            width: 60px;
+            border: none;
+            color: bisque;
+            background-color: blueviolet;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+
+        .js-double-size {
+            /* height: 2em;
+            width:4em;
+            font-size: 2em; */
+            height: 60px;
+            width: 120px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="double-btn">Click</button>
+    <!-- <button class="double-btn"  onclick="buttonGrow()">Click</button> -->
+
+
+    <script>
+
+        let multiply = function (num1, num2) {
+            return num1 * num2
+        }
+        console.log(multiply(3, 4))
+
+
+        let greeting = () => { console.log('🙏') }
+        function runTwice(fun) {
+            fun()
+            fun()
+        }
+        runTwice(greeting)
+
+
+
+
+        function buttonGrow() {
+            let element = document.querySelector('.double-btn');
+            setTimeout(() => {
+                element.classList.add('js-double-size')
+            }, 2000)
+        }
+
+        let element = document.querySelector('.double-btn');
+        element.addEventListener('click', buttonGrow)
+
+
+
+        function arraySum(arr) {
+            let sum = 0;
+            arr.forEach((n) => {
+                sum = sum + n
+            })
+            console.log(sum)
+        }
+        arraySum([11, 2, 3, 4, 5])
+
+
+
+        let arr = [11, 2, 3, 4, 5]
+        function arraySquares(arr) {
+            return arr.map((num) => { return num * num })
+
+        }
+        console.log(arraySquares(arr))
+
+
+        let arraySquaresArrow = arr.map((num) => num * num)
+        console.log(arraySquaresArrow)
+
+
+    </script>
+</body>
+
+</html
